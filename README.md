@@ -1,4 +1,4 @@
-# jaehyung.site — Portfolio
+# hirejjaaee.site — Portfolio
 
 Personal portfolio for Mark Jonathan M. Bacarac (Jae): full stack developer and SOC security
 analyst. A single-page, anchor-navigated site plus two static legal pages, built with React,

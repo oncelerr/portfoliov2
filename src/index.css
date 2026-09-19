@@ -128,6 +128,18 @@ body {
   opacity: 0.6;
 }
 
+/* Fullscreen terminal mode: fixed dark palette, independent of the light/dark toggle. See pages/Terminal.tsx */
+.terminal {
+  --term-bg: #07080a;
+  --term-fg: #e7e9ec;
+  --term-dim: #7c8794;
+  --term-accent: #e3a53d;
+  --term-err: #ef6f61;
+  background-color: var(--term-bg);
+  color: var(--term-fg);
+  color-scheme: dark;
+}
+
 /* Custom reticle cursor: only engaged on fine-pointer devices without reduced motion, see CursorFX.tsx */
 html.cursor-fx-active,
 html.cursor-fx-active * {

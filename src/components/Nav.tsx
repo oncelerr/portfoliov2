@@ -6,7 +6,7 @@ import { ThemeToggle } from "./ThemeToggle";
 
 export function Nav() {
   const location = useLocation();
-  const isHome = location.pathname === "/";
+  const isHome = location.pathname === "/site" || location.pathname === "/";
   const [activeHref, setActiveHref] = useState("#home");
   const [mobileOpen, setMobileOpen] = useState(false);
   const navRef = useRef<HTMLElement>(null);
@@ -52,7 +52,7 @@ export function Nav() {
         className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8"
       >
         <a
-          href={isHome ? "#home" : "/"}
+          href={isHome ? "#home" : "/site"}
           className="font-display text-sm font-semibold tracking-tight text-content-primary"
         >
           {person.handle}<span className="text-accent">.</span>
@@ -62,7 +62,7 @@ export function Nav() {
         <ul className="hidden items-center gap-1 md:flex">
           {nav.map((item) => {
             const isActive = isHome && activeHref === item.href;
-            const href = isHome ? item.href : `/${item.href}`;
+            const href = isHome ? item.href : `/site${item.href}`;
             return (
               <li key={item.href}>
                 <a
@@ -114,7 +114,7 @@ export function Nav() {
             {nav.map((item) => (
               <li key={item.href}>
                 <a
-                  href={isHome ? item.href : `/${item.href}`}
+                  href={isHome ? item.href : `/site${item.href}`}
                   onClick={() => setMobileOpen(false)}
                   className="block rounded-control px-3 py-2 font-mono text-sm uppercase tracking-wide text-content-secondary hover:bg-surface-1 hover:text-content-primary"
                 >

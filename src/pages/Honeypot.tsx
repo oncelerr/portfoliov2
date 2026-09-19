@@ -40,7 +40,7 @@ export function Honeypot() {
           Genuinely, though — if you&apos;re the kind of person who probes random sites for{" "}
           <code className="rounded-control bg-surface-2 px-1.5 py-0.5 font-mono text-[13px]">{location.pathname}</code>,
           I&apos;d rather point that curiosity somewhere useful. Check the{" "}
-          <a href="/#security" className="text-accent hover:underline">
+          <a href="/site#security" className="text-accent hover:underline">
             security work
           </a>{" "}
           on this site, or email me and let&apos;s do it properly:{" "}

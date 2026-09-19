@@ -12,7 +12,7 @@ export function LegalLayout({
 }) {
   return (
     <article className="mx-auto max-w-3xl px-4 py-20 sm:px-6 lg:px-8">
-      <Link to="/" className="font-mono text-xs uppercase tracking-wide text-content-secondary hover:text-accent">
+      <Link to="/site" className="font-mono text-xs uppercase tracking-wide text-content-secondary hover:text-accent">
         &larr; Back to site
       </Link>
       <h1 className="mt-6 font-display text-3xl font-semibold text-content-primary sm:text-4xl">{title}</h1>

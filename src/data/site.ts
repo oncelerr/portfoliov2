@@ -8,7 +8,7 @@ export const person = {
   phone: "+63 960 237 7733",
   github: "https://github.com/oncelerr",
   linkedin: "https://linkedin.com/in/jjaaee/",
-  resumeUrl: "#RESUME_PDF_URL",
+  resumeUrl: "/resume.pdf",
 } as const;
 
 export const heroTech = [

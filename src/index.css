@@ -127,3 +127,48 @@ body {
   color: var(--color-content-secondary);
   opacity: 0.6;
 }
+
+/* Custom reticle cursor: only engaged on fine-pointer devices without reduced motion, see CursorFX.tsx */
+html.cursor-fx-active,
+html.cursor-fx-active * {
+  cursor: none !important;
+}
+
+html.cursor-fx-active input,
+html.cursor-fx-active textarea,
+html.cursor-fx-active select,
+html.cursor-fx-active [contenteditable="true"] {
+  cursor: text !important;
+}
+
+.cursor-fx-dot {
+  transition: opacity 0.15s ease;
+}
+
+.cursor-fx-ring {
+  --cursor-hover-scale: 1;
+  --cursor-press-scale: 1;
+  display: flex;
+  color: var(--color-border-strong);
+  transform: translate(-50%, -50%) scale(calc(var(--cursor-hover-scale) * var(--cursor-press-scale)));
+  transition:
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    color 0.2s ease;
+  animation: cursor-fx-spin 9s linear infinite;
+}
+
+.cursor-fx-ring[data-state="hover"] {
+  --cursor-hover-scale: 1.55;
+  color: var(--color-accent);
+  animation-duration: 2.2s;
+}
+
+.cursor-fx-ring[data-active="true"] {
+  --cursor-press-scale: 0.82;
+}
+
+@keyframes cursor-fx-spin {
+  to {
+    transform: translate(-50%, -50%) scale(calc(var(--cursor-hover-scale) * var(--cursor-press-scale))) rotate(360deg);
+  }
+}

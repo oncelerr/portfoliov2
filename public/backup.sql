@@ -1,0 +1,7 @@
+-- SELECT 'nice try' AS result;
+--
+-- there is no database behind this site — it's a static React build.
+-- nothing was ever dumped here, because there was never anything to dump.
+--
+-- I know what you're doing. Haha. This is just a portfolio, why attack? 😄
+-- markjonathan368@gmail.com if you want a real target to test against (with permission).

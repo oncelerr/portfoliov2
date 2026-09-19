@@ -88,6 +88,8 @@ export function Nav() {
         <div className="flex items-center gap-2">
           <a
             href={person.resumeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden rounded-control border border-border-strong px-3 py-1.5 font-mono text-xs uppercase tracking-wide text-content-primary transition-colors hover:border-accent hover:text-accent sm:inline-flex"
           >
             Resume
@@ -123,6 +125,8 @@ export function Nav() {
             <li>
               <a
                 href={person.resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
                 className="mt-2 block rounded-control border border-border-strong px-3 py-2 text-center font-mono text-sm uppercase tracking-wide text-content-primary"
               >

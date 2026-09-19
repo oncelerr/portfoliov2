@@ -1,0 +1,7 @@
+Contact: mailto:markjonathan368@gmail.com
+Expires: 2027-09-19T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://jaehyung.site/.well-known/security.txt
+
+# Found a real issue in the site itself (not the honeypot paths — those are on purpose)?
+# I'd genuinely like to hear about it.

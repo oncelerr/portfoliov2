@@ -5,7 +5,18 @@ import { ProjectMockup } from "./ProjectMockup";
 export function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="flex flex-col overflow-hidden rounded-card border border-border-subtle bg-surface-1 transition-colors hover:border-border-strong">
-      <ProjectMockup variant={project.mockup ?? "none"} />
+      {project.image ? (
+        <div className="aspect-video w-full overflow-hidden rounded-t-card border-b border-border-subtle bg-surface-2">
+          <img
+            src={project.image}
+            alt={`${project.title} screenshot`}
+            className="h-full w-full object-cover object-top"
+            loading="lazy"
+          />
+        </div>
+      ) : (
+        <ProjectMockup variant={project.mockup ?? "none"} />
+      )}
       <div className="flex flex-1 flex-col p-5">
         <h3 className="font-display text-lg font-semibold text-content-primary">{project.title}</h3>
         {project.org && (

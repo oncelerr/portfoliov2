@@ -14,6 +14,7 @@ export interface Project {
   tags: string[];
   links: ProjectLink[];
   mockup?: "browser" | "terminal" | "report" | "none";
+  image?: string;
 }
 
 export const projectGroups: { id: ProjectGroup; label: string; tag: string }[] = [
@@ -37,6 +38,7 @@ export const projects: Project[] = [
       { label: "GitHub", href: "https://github.com/oncelerr/pcs-v2" },
     ],
     mockup: "browser",
+    image: "/images/projects/pcs.png",
   },
   {
     id: "kogh",
@@ -51,6 +53,7 @@ export const projects: Project[] = [
       { label: "GitHub", href: "https://github.com/oncelerr/kogh-cloud" },
     ],
     mockup: "browser",
+    image: "/images/projects/kogh.png",
   },
   {
     id: "vts",
@@ -65,6 +68,7 @@ export const projects: Project[] = [
       { label: "GitHub", href: "https://github.com/oncelerr/VTS" },
     ],
     mockup: "browser",
+    image: "/images/projects/vts.png",
   },
   {
     id: "kmbm",
